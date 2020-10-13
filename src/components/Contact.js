@@ -1,15 +1,21 @@
 import React from 'react';
 import './contact.css';
 
+const name = "Duane Gutierrez";
+const avatar = "https://randomuser.me/api/portraits/men/50.jpg";
+const isOnline = false;
+const onlineTrigger = isOnline ? "status-online" : "status-offline";
+const onlineStatus = isOnline ? "Online" : "Offline";
+
 function Contact() {
   return (
     <div className='Contact'>
-      <img className='avatar' src='https://randomuser.me/api/portraits/men/50.jpg'/>
+      <img className='avatar' src={avatar}/>
       <span>
-        <h4 className='name'>Duane Gutierrez</h4>
+        <h4 className='name'>{name}</h4>
         <div className='status'>
-          <div className='status-online'></div>
-          <p className='status-text'>Online</p>
+          <div className={onlineTrigger}></div>
+          <p className='status-text'>{onlineStatus}</p>
         </div>
       </span>
     </div>
