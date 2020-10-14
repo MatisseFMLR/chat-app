@@ -9,6 +9,16 @@ function App() {
         avatar="https://randomuser.me/api/portraits/men/50.jpg" 
         isOnline={false}
       />
+      <Contact 
+        name="Bradley Ruiz"  
+        avatar="https://randomuser.me/api/portraits/men/23.jpg" 
+        isOnline={true}
+      />
+      <Contact 
+        name="Deanna Ryan"  
+        avatar="https://randomuser.me/api/portraits/women/56.jpg" 
+        isOnline={false}
+      />
     </div>
   );
 }
