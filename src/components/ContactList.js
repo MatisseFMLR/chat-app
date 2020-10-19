@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from './Contact'
 
 const users = [
   {
@@ -31,16 +32,10 @@ const users = [
 const ContactList = () => (
   <div>
     {users.map(item => (
-      <div className='Contact'>
-        <img className='avatar' src={item.avatar}/>
-        <span>
-          <h4 className='name'>{item.name}</h4>
-          <div className='status'>
-            <div className={item.online ? "status-online" : "status-offline"}></div>
-            <p className='status-text'>{item.online ? "Online" : "Offline"}</p>
-          </div>
-      </span>
-      </div>
+     <Contact 
+        key={item.name}
+        name={item.name}
+        avatar={item.avatar}/>
     ))}
   </div>
     
